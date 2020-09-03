@@ -340,6 +340,7 @@ a {
 
 /*---/ Секция stories /---*/
 /*--- Секция about ---*/
+.about {padding: 0 0 300px 0;}
 .about__row {
   display: flex;
   justify-content: space-between;
