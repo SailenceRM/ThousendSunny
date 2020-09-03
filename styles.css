@@ -138,6 +138,7 @@ a {
 .home__img {
   max-width: 70%;
 }
+.home{padding:0 0 340px 0}
 
 .finder {
   display: flex;
