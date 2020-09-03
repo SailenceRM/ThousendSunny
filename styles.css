@@ -1,0 +1,451 @@
+@charset "UTF-8";
+/*--- Общие Стили ---*/
+a {
+  text-decoration: none;
+}
+
+.button {
+  padding: 1em 3.4375em;
+  color: #ffffff;
+  background: #FB8F1D;
+  border-radius: 0.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Inter', sans-serif;
+	font-family: 'Mulish', sans-serif;
+	font-family: 'Playfair Display', serif; */
+:root {
+  font-size: 16px;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.logotip {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 10px solid #1ABE84;
+}
+.logotip::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #FB8F1D;
+}
+
+.suptitle {
+  font-family: "Mulish", sans-serif;
+  color: #848484;
+  font-size: 1.125rem;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+/*---/ Общие Стили /---*/
+/*--- Секция header ---*/
+.header {
+  padding: 30px 0;
+  font-family: "Inter", sans-serif;
+}
+.header__row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__nav {
+  margin-left: auto;
+}
+.header__nav-item {
+  margin-right: 2em;
+  color: #B8BECD;
+  transition: 0.2s;
+  font-weight: 400;
+}
+.header__nav-item:hover {
+  color: #202336;
+}
+.header__sign {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.header__login {
+  transition: 0.2s;
+  margin-right: 1em;
+  padding: 1em 3em;
+  color: #FB8F1D;
+  border-radius: 0.5em;
+  border: solid 2px #FB8F1D;
+  display: inline-block;
+}
+.header__login:hover {
+  background: #FB8F1D;
+  color: #ffffff;
+  border: solid 2px #FB8F1D;
+}
+.header__register {
+  transition: 0.2s;
+  padding: 1em 3em;
+  background: #FB8F1D;
+  color: #ffffff;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  border: solid 2px #FB8F1D;
+}
+.header__register:hover {
+  background: transparent;
+  color: #FB8F1D;
+  border: solid 2px #FB8F1D;
+}
+
+/*---/ Секция header /---*/
+/*--- Секция home ---*/
+.home__row {
+  display: flex;
+  justify-content: space-between;
+}
+.home__title {
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  color: #202336;
+}
+.home__button {
+  font-size: 1.16rem;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+}
+.home__img {
+  max-width: 70%;
+}
+
+.finder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.finder__title {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: #202336;
+  padding-bottom: 1.18em;
+}
+.finder__title:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 2px;
+  background: #202336;
+  display: block;
+  bottom: 0;
+  border-radius: 4px;
+}
+.finder__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.select__wrapper {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  color: #4A4C53;
+  position: relative;
+}
+.select__radio {
+  display: none;
+}
+.select__selected {
+  cursor: pointer;
+  border: solid 1px #AFB0B9;
+  padding: 1.2em 2em;
+  border-radius: 6px;
+  width: 220px;
+  position: relative;
+}
+.select__selected:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #4A4C53;
+  border-right: 2px solid #4A4C53;
+  transform: rotate(45deg);
+  right: 2em;
+  top: 20px;
+}
+.select__selected.active:after {
+  transform: rotate(-135deg);
+  top: 25px;
+}
+.select__options {
+  position: absolute;
+  background: #ffffff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: solid 1px #AFB0B9;
+  border-top: none;
+  display: none;
+}
+.select__options.active {
+  display: block;
+}
+.select__option {
+  padding: 1.2em 2em;
+}
+.select__option:hover {
+  background: #EFECEC;
+}
+
+/*---/ Секция home /---*/
+/*--- Секция footer ---*/
+.footer {
+  background: #F9F9FB;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.125rem;
+}
+.footer__content {
+  padding: 80px 0;
+  display: flex;
+}
+.footer__media {
+  border-top: solid 1px #C4C4C4;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+.footer__icons {
+  display: flex;
+  width: 248px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logotip {
+  margin: 0 0 30px 0;
+}
+.footer__suptitle {
+  margin: 0 0 35px 0;
+}
+.footer__right {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  flex-basis: 720px;
+}
+.footer__link {
+  color: #848484;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__link-title {
+  margin-bottom: 2em;
+  font-size: 1.1875rem;
+  font-weight: 700;
+}
+.footer__collumn p {
+  margin: 0 0 1.4em 0;
+}
+.footer__collumn p:last-child {
+  margin: 0;
+}
+
+/*---/ Секция footer /---*/
+/*--- Секция stories ---*/
+.stories {
+  font-family: "Inter", sans-serif;
+}
+.stories__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.stories__top-link {
+  display: flex;
+  align-items: center;
+  color: #FB8F1D;
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+.stories__top-icon {
+  margin-left: 10px;
+  width: 9px;
+  height: 9px;
+  border-bottom: 2px solid #FB8F1D;
+  border-right: 2px solid #FB8F1D;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+.stories__row {
+  display: flex;
+}
+.stories__item {
+  width: 25%;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.stories__item:last-child {
+  margin-right: 0;
+}
+.stories__button {
+  color: #FB8F1D;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-top: auto;
+}
+.stories__img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-bottom: 20px;
+}
+.stories__title {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.stories__text {
+  font-size: 0.9375rem;
+  font-weight: normal;
+  color: #7D7987;
+  margin-bottom: 40px;
+}
+
+/*---/ Секция stories /---*/
+/*--- Секция about ---*/
+.about__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 40%;
+}
+.about__img {
+  max-width: 70%;
+}
+.about__title {
+  margin: 0 0 36px 0;
+}
+.about__suptitle {
+  margin: 0 0 44px 0;
+}
+
+/*---/ Секция about /---*/
+/*--- Секция download ---*/
+.download__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*---/ Секция download /---*/
+/*--- Секция comments ---*/
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+.slider__item {
+  display: flex;
+  justify-content: space-between;
+}
+.slider__img {
+  position: relative;
+  width: 490px;
+  height: 380px;
+  border-radius: 14px;
+  background: url("img/img1Testi.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider:before {
+  z-index: 100;
+  content: "";
+  background: #ffffff;
+  width: 132px;
+  height: 60px;
+  border-radius: 16px 0px 0px 0px;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.slider__suptitle {
+  font-family: "Mulish", sans-serif;
+}
+
+.slick-track {
+  display: flex;
+  overflow: hidden;
+  padding-right: 100px;
+}
+
+.slick-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  outline: transparent !important;
+  z-index: 200;
+}
+.slick-arrow.slick-prev {
+  right: 60px;
+}
+.slick-arrow.slick-prev:before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-225deg);
+  border-bottom: #000000 solid 2px;
+  border-right: #000000 solid 2px;
+}
+.slick-arrow.slick-next:before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-bottom: #000000 solid 2px;
+  border-right: #000000 solid 2px;
+}
+
+/*---/ Секция comments /---*/
